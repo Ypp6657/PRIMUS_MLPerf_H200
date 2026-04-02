@@ -113,12 +113,14 @@ PRIMUS_MICRO_BATCH_SIZE=1
 Metric	Before	After
 Memory	~134GB	~100–115GB
 Stability	OOM	Stable
+
 🧾 8. SLURM Execution
 sbatch run_h200_moe.sh
 Features
 Automatic log archiving
 Timestamp-based run tracking
 Clean environment execution
+
 📊 9. Training Behavior
 Training Loss
 11 → 10 → 5 → 3.5 → 3.3
@@ -132,6 +134,7 @@ Evaluation Loss
 ⚡ Throughput
 Average: ~9 samples/sec
 Minimum: 8.62 samples/sec
+
 🧠 10. Key Learnings
 🔹 Train vs Eval Loss
 Train loss → noisy
@@ -144,6 +147,7 @@ Controls stopping condition
 Stops when:
 
 eval_loss ≤ 3.34
+
 ⚠️ 11. Issues & Fixes
 Issue	Resolution
 Patch mismatch	Checkout correct commit
@@ -152,6 +156,7 @@ Docker runtime issues	Fixed patch alignment
 CUDA OOM	Reduced micro-batch
 Cache clearing issues	Disabled
 SLURM instability	Clean execution
+
 🎯 12. Final Outcome
 ✅ Docker image built successfully
 ✅ Patch correctly applied
@@ -160,6 +165,7 @@ SLURM instability	Clean execution
 ✅ MLPerf logging working
 ✅ Throughput measured
 ✅ Convergence achieved (~3.19 loss)
+
 🚀 13. Conclusion
 
 This project demonstrates:
