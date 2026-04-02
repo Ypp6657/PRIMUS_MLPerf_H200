@@ -43,69 +43,53 @@ docs/ → Detailed explanation
 ## ⚙️ Setup Instructions
 
 ### 1. Clone Repository
-
-```bash
 git clone https://github.com/<your-username>/PRIMUS-MLPerf-H200.git
 cd PRIMUS-MLPerf-H200
+
 2. Environment Setup
-bash scripts/setup_env.sh
-3. Run Benchmark
+bash scripts/setup_H200_1x8x1.sh
+
+4. Run Benchmark
 bash scripts/run_and_time.sh
+
 📊 Results
 Metric	Value
 Target Loss	3.34
 Achieved Loss	<your_value>
+
 Step Time	~1.0 sec
 GPUs Used	8 × H200
+
 📈 Performance Insights
 Efficient scaling across 8 GPUs using NCCL
 Stable convergence to MLPerf target loss
 Optimized batch size and training steps
+
 🧠 Key Learnings
 Deep understanding of MLPerf benchmarking pipeline
 Multi-GPU distributed training optimization
 Primus MoE architecture internals
 HPC cluster execution using SLURM + containers
+
 🚧 Future Work
 Multi-node scaling experiments
 FP8 / mixed precision optimization
 vLLM benchmarking comparison
 Automated performance dashboards
+
 🙌 Acknowledgements
 MLPerf Training Benchmark
 NVIDIA GPU Architecture
 Primus Framework
+
+
 📬 Contact
 
 Yash Pawar
 Project Engineer @ CDAC
+yashpawar@cdac.in
 
 
 ---
 
-# 📊 5. Add Results Visualization (THIS WILL BOOST YOUR PROFILE 🔥)
 
-Inside `results/plots/` add:
-
-- training loss curve
-- throughput graph
-- GPU utilization (if possible)
-
-If you want, I can generate **Plotly + Seaborn scripts** for this.
-
----
-
-# 🧠 6. Add "docs/learnings.md" (THIS IS GOLD)
-
-This is where you stand out from others.
-
-Write things like:
-
-```markdown
-## What I Learned
-
-- How MLPerf defines benchmarking standards
-- Importance of evaluation frequency
-- Distributed training bottlenecks (communication vs compute)
-- Effect of batch size on convergence
-- GPU scaling challenges
