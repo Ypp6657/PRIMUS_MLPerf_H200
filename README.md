@@ -1,4 +1,5 @@
 MLPerf-Style GPT-OSS-20B MoE Benchmark on NVIDIA H200 (Primus Framework)
+
 🧠 1. Objective
 
 The goal of this project was to:
@@ -7,11 +8,13 @@ Successfully build and execute the GPT-OSS 20B Mixture of Experts (MoE) pretrain
 Use Primus + Megatron-LM framework
 Run on 8× NVIDIA H200 GPUs (Single Node)
 Achieve a valid MLPerf-style benchmark execution
+
 ✅ Key Requirements
 Correct distributed training pipeline
 Stable execution across GPUs
 Convergence to target loss (~3.34)
 Proper logging and throughput tracking
+
 🏗️ 2. System Setup
 💻 Hardware
 1 Node
@@ -21,6 +24,7 @@ Docker-based environment
 Primus Framework
 Megatron-LM backend
 MLPerf logging (primus_mllog)
+
 📁 3. Repository Structure
 configs/        → Training configuration (H200 setup)
 scripts/        → Execution + setup scripts
@@ -28,6 +32,7 @@ docker/         → Docker build files
 model/          → Tokenizer files
 results/        → Benchmark outputs
 docs/           → Technical notes & learnings
+
 🐳 4. Docker Build Debugging
 🚨 Initial Issue
 
